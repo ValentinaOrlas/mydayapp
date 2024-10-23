@@ -12,7 +12,7 @@ const Info = () => {
       <h1>My Day</h1>
       <p>All my tasks in one place</p>
       <div>
-        <CrearTarea/>
+        <CrearTarea/> 
         {context.tasks.map((task) => (
           <Tarea key={task.id} task={task} /> 
         ))}
