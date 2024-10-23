@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import Info from './Components/Info/Info'
+import { TaskProvider } from './Components/Context/Context'; 
+import Info from './Components/Info/Info';
 
 function App() {
-  
-
   return (
-    <>
-      <Info></Info>
-    </>
-  )
+    <TaskProvider>
+      <Info />
+    </TaskProvider>
+  );
 }
 
-export default App
+export default App;

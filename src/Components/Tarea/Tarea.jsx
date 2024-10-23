@@ -1,22 +1,15 @@
-import React from "react";
+import logicTask from "./Hooks/logicTarea";
 
-const Tarea = () => {
+const Tarea = ({id, titleTask}) => {
+
+  const { title, handleTitleTask, handleCreateTask,} = logicTask();
+
+
   return (
     <div>
-      <input type="text" placeholder="Type new todo" />
 
-      <div>
-        <label></label>
-        <input type="text" placeholder="Make dishes" />
-      </div>
+      <input  value={title} onChange={handleTitleTask} autoFocus onKeyDown={handleCreateTask} type="text" placeholder="Type new todo" />
 
-      <div>
-        <button>All</button>
-        <button>Pending</button>
-        <button>Completed</button>
-        <button>Clear completed</button>
-        <span>0 item left</span>
-      </div>
     </div>
   );
 };
