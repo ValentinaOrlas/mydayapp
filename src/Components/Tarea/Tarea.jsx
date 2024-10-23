@@ -16,7 +16,7 @@ const Tarea = ({ task }) => {
   // Función para manejar el inicio de la edición
   const handleDoubleClick = () => {
     setIsEditing(true);
-    setNewTitle(task.title); // Configura el título de la tarea para editar
+    setNewTitle(task.title); 
   };
 
   // Función para manejar la edición de la tarea

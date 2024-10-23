@@ -10,8 +10,6 @@ export const TaskProvider = ({children}) =>{
     return guardarTareas ? JSON.parse(guardarTareas) : [];
   });
 
-    const [pendingTasks, setPendingTasks] = useState([]);
-    const [completedTasks, setCompletedTasks] = useState([]);
 
 useEffect(() => {
     
@@ -29,7 +27,7 @@ useEffect(() => {
 
   return (
     <taskContext.Provider
-    value = {{tasks, setTasks, pendingTasks, setPendingTasks,completedTasks, setCompletedTasks , updateTaskStatus}}>
+    value = {{tasks, setTasks , updateTaskStatus}}>
       {children}
     </taskContext.Provider>
   )
