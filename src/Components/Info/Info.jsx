@@ -16,14 +16,17 @@ const Info = () => {
       
       <CrearTarea /> 
 
-      {hasTasks && (
-        <div id="main">
+<div id="main" className="task-list">
+{ hasTasks && (
+        <div  >
           {context.tasks.map((task) => (
             <Tarea key={task.id} task={task} />
           ))}
         </div>
       )}
 
+</div>
+      
       {hasTasks && <Footer />}
     </div>
   );

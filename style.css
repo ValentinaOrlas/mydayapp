@@ -1,0 +1,112 @@
+/* Contenedor principal */
+#main {
+  position: relative;
+  width: 100%; 
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fondo degradado morado-azul desde la mitad de la pantalla */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50vh; /* Cubre solo la mitad superior */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradado morado-azul */
+  z-index: -1;
+}
+
+/* Título y subtítulo */
+h1, p {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Contenedor que centra todo verticalmente */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; /* Cubre toda la pantalla */
+  padding-top: 25vh; /* Inicia desde la mitad superior */
+}
+
+/* Caja de texto para crear tareas */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Lista de tareas */
+.task-list {
+  width: 100%;
+}
+
+.task-list .task-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list .task-item:last-child {
+  border-bottom: none;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer .filter-btn {
+  background-color: #2575fc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+footer .clear-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}

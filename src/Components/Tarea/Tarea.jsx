@@ -79,7 +79,7 @@ const Tarea = ({ task }) => {
         <label onDoubleClick={handleDoubleClick}>{task.title}</label>
       )}
       {showDelete && (
-        <button className="destroy" onClick={handleDeleteTask}>Eliminar</button>
+        <button className="clear-btn" onClick={handleDeleteTask}>Eliminar</button>
       )}
     </div>
   );

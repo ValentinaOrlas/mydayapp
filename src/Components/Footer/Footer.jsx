@@ -17,15 +17,15 @@ const Footer = () => {
       <footer id="footer">
         <span><strong>{tareasPendientes} {itemText} left</strong></span>
         <Link to="/all">
-          <button>All</button>
+          <button className="filter-btn">All</button>
         </Link>
         <Link to="/pending">
-          <button>Pending</button>
+          <button className="filter-btn">Pending</button>
         </Link>
         <Link to="/completed">
-          <button>Completed</button>
+          <button className="filter-btn">Completed</button>
         </Link>
-        <button onClick={handleEliminar}>Clear completed</button>
+        <button onClick={handleEliminar} className="clear-btn">Clear completed</button>
       </footer>
     </div>
   );
