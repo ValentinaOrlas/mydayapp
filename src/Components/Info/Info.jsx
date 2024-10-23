@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { taskContext } from '../Context/Context';
 import Tarea from "../Tarea/Tarea";
 import Footer from "../Footer/Footer";
+import CrearTarea from "../CraerTarea/CrearTarea";
 
 const Info = () => {
-
   const context = useContext(taskContext);
 
   return (
@@ -12,17 +12,14 @@ const Info = () => {
       <h1>My Day</h1>
       <p>All my tasks in one place</p>
       <div>
-
-      <Tarea />
+        <CrearTarea/>
         {context.tasks.map((task) => (
-          <div key={task.id}>
-            <p>{task.title}</p>
-          </div>
+          <Tarea key={task.id} task={task} /> 
         ))}
-      <Footer />
       </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Info;
