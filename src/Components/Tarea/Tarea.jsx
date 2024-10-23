@@ -1,4 +1,4 @@
-import logicTask from "./Hook/logicTarea";
+import logicTask from "./Hook/logicTask";
 import { taskContext } from "../Context/Context";
 import { useContext , useState} from "react";
 
