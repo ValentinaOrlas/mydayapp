@@ -1,7 +1,7 @@
 import { TaskProvider } from './Components/Context/Context'; 
 import Info from './Components/Info/Info';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import '../style.css';
+import '../style.css';  
 
 function App() {
   return (
