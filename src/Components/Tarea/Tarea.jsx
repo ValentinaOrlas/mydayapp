@@ -1,10 +1,10 @@
-import logicTask from "./Hook/logicTask";
+import logicTarea from "./Hook/logicTarea";
 import { taskContext } from "../Context/Context";
 import { useContext , useState} from "react";
 
 const Tarea = ({task}) => {
 
-  const { title, handleTitleTask, handleCreateTask,} = logicTask();
+  const { title, handleTitleTask, handleCreateTask,} = logicTarea();
   const context = useContext(taskContext);
   const [isEditing, setIsEditing] = useState(false);
   const [newTitle, setNewTitle] = useState(task.title);
